@@ -5,4 +5,10 @@ from django.http import HttpResponse
 
 
 def tarefas_home(request):
-  return 
+  contexto = {
+    "nome": "Luiz"
+  }
+  return render(request, 'tarefas/home.html', contexto)
+
+def tarefas_adicionar(request):
+  return HttpResponse("Adicione aqui sua tarefa!")
